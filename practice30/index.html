@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function random_range(start_num, end_num) {
+            if (Array.isArray(start_num)) {
+                var randomIndex = Math.floor(Math.random() * ((start_num.length - 1) - 0 + 1) + 0);
+                return start_num[randomIndex];
+            } else if (Array.isArray(end_num)) {
+                var randomIndex = Math.floor(Math.random() * ((end_num.length - 1) - 0 + 1) + 0);
+                return end_num[randomIndex];
+            }
+            return Math.floor(Math.random() * ((end_num - start_num) + 1) + start_num);
+        }
+        console.log(random_range(2, 15));
+        console.log(random_range(1, 100));
+        console.log(random_range(['a', 'b', 'c', 'd', 'e']));
+
+    </script>
+</body>
+
+</html>
