@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function find_middle_letters(string) {
+            var char_count = string.length
+            if (char_count % 2 === 0) {
+                return string.charAt(char_count / 2 - 1) + string.charAt(char_count / 2);
+            }
+            return string.charAt((char_count - 1) / 2)
+        }
+        console.log(find_middle_letters('seven'));
+        console.log(find_middle_letters('dish'));
+        console.log(find_middle_letters('hello'));
+        console.log(find_middle_letters('goodbye'));
+
+    </script>
+</body>
+
+</html>
