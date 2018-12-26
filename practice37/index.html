@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function cap_every_other_letter(string) {
+            var string_into_array = string.split('');
+            for (i = 1; i < string_into_array.length; i += 2) {
+                string_into_array[i] = string_into_array[i].toUpperCase()
+            }
+            return string_into_array.join('')
+        }
+        console.log(cap_every_other_letter('amazing'))
+        console.log(cap_every_other_letter('awesome'))
+        console.log(cap_every_other_letter('one last test'))
+
+    </script>
+</body>
+
+</html>
