@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function store_vowels(string_sentence) {
+            var string_vowels = [];
+            for (i = 0; i < string_sentence.split('').length; i++) {
+                switch (string_sentence.charAt(i)) {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        string_vowels.push(string_sentence.charAt(i))
+                        break;
+                    default:
+                }
+            }
+            return string_vowels.join('')
+        }
+        console.log(store_vowels("four score and seven years ago"))
+    </script>
+</body>
+
+</html>
