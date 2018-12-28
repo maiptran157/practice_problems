@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sort(inputArray) {
+            for (j = 0; j < inputArray.length; j++) {
+                for (i = 0; i < inputArray.length - 1; i++) {
+                    // debugger;
+                    if (inputArray[i].charCodeAt() > inputArray[(i + 1)].charCodeAt()) {
+                        var tempHolder = inputArray[i];
+                        inputArray[i] = inputArray[i + 1];
+                        inputArray[i + 1] = tempHolder;
+                    }
+                }
+            }
+            return inputArray
+        }
+        console.log(sort(['mouse', 'cat', 'dog', 'human']));
+        console.log(sort(['a', 'c', 'b', 'd', 'e', 'g', 'f']));
+    </script>
+</body>
+
+</html>
