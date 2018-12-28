@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function groupArray(inputArray) {
+            var outputArray = [[], [], []];
+            for (i = 0; i < inputArray.length; i++) {
+                if (typeof inputArray[i] === 'string') {
+                    outputArray[0].push(inputArray[i])
+                } else if (typeof inputArray[i] === 'number') {
+                    outputArray[1].push(inputArray[i])
+                } else if (typeof inputArray[i] === 'boolean') {
+                    outputArray[2].push(inputArray[i])
+                }
+            }
+            return outputArray;
+        }
+        console.log(groupArray(['hello', 34, true, false, 'goodbye', 56, 12, '25', true]))
+    </script>
+</body>
+
+</html>
