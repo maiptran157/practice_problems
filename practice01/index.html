@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function biggerWords(word, array_of_words) {
+            var outputArray = [];
+            for (i = 0; i < array_of_words.length; i++) {
+                if (word.length < array_of_words[i].length) {
+                    outputArray.push(array_of_words[i])
+                }
+            }
+            return outputArray;
+        }
+        console.log(biggerWords('whales', ['bug', 'insect', 'mammal', 'reptile', 'mammoth', 'turtles']))
+    </script>
+</body>
+
+</html>
