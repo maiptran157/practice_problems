@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function randomize_list(input_array) {
+            for (i = 0; i < input_array.length; i++) {
+                var random_position = Math.floor(Math.random() * input_array.length)
+                var temp = input_array[i];
+                input_array[i] = input_array[random_position];
+                input_array[random_position] = temp;
+            }
+            return input_array;
+        }
+        console.log('Original array [1,2,3,4,5]. Random array:', randomize_list([1, 2, 3, 4, 5]))    
+    </script>
+</body>
+
+</html>
