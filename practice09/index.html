@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fittingWords(myString, myArray) {
+            var outputArray = [];
+            for (i = 0; i < myArray.length; i++) {
+                var matchCounter = 0;
+                for (j = 0; j < myString.length; j++) {
+                    if (myArray[i].includes(myString.charAt(j))) {
+                        matchCounter++;
+                    }
+                    if (matchCounter === myString.length) {
+                        outputArray.push(myArray[i]);
+                    }
+                }
+            }
+            return outputArray;
+        }
+
+        console.log(fittingWords('cat', ['cat', 'caterpillar', 'whale', 'accurate', 'smile', 'cactus', 'cute']))
+
+    </script>
+</body>
+
+</html>
