@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function skippy_numbers(num) {
+            var outputArray = [];
+            for (i = 0; i < 8; i++) {
+                if (i === 0) {
+                    outputArray[i] = num
+                } else if (i % 2 === 0) {
+                    outputArray[i] = outputArray[i - 1] + 2
+                } else {
+                    outputArray[i] = outputArray[i - 1] + 1
+                }
+            }
+            return outputArray;
+        }
+        console.log(skippy_numbers(2));
+    </script>
+</body>
+
+</html>
