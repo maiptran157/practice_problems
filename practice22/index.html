@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function convert_string_to_number(value_to_sort) {
+            switch (typeof value_to_sort) {
+                case 'string':
+                    // if (value_to_sort.length > 1) {
+                    //     var totalCharCode = 0;
+                    //     for (i = 0; i < value_to_sort.length; i++) {
+                    //         totalCharCode += value_to_sort.charCodeAt(i)
+                    //     }
+                    //     var averageCharCode = Math.floor(totalCharCode / value_to_sort.length);
+                    //     return averageCharCode;
+                    // }
+                    return value_to_sort.charCodeAt();
+                    break;
+                default:
+                    return value_to_sort;
+            }
+        }
+        function sort_object_list_by_field(input_array, field_to_sort) {
+            for (var j = 0; j < input_array.length; j++) {
+                for (var i = 0; i < input_array.length; i++) {
+                    // debugger;
+
+                    if (i === input_array.length - 1) {
+                        if (convert_string_to_number(input_array[i][field_to_sort]) < convert_string_to_number(input_array[i - 1][field_to_sort])) {
+                            var temp_position = input_array[i];
+                            input_array[i] = input_array[i - 1];
+                            input_array[i - 1] = temp_position;
+                        }
+                    } else if (
+                        convert_string_to_number(input_array[i][field_to_sort])
+                        >
+                        convert_string_to_number(input_array[i + 1][field_to_sort])
+                    ) {
+
+                        var temp_position = input_array[i];
+                        input_array[i] = input_array[i + 1];
+                        input_array[i + 1] = temp_position;
+                    }
+                }
+
+            }
+            return input_array;
+        }
+
+        console.log("sort by age:", sort_object_list_by_field([
+            { name: 'John', age: 42, gender: 'M' },
+            { name: 'Jack', age: 34, gender: 'M' },
+            { name: 'Michael', age: 40, gender: 'M' },
+            { name: 'Kendra', age: 48, gender: 'F' }
+        ], "age"))
+        console.log("sort by name:", sort_object_list_by_field([
+            { name: 'John', age: 42, gender: 'M' },
+            { name: 'Jack', age: 34, gender: 'M' },
+            { name: 'Michael', age: 40, gender: 'M' },
+            { name: 'Kendra', age: 48, gender: 'F' }
+        ], "name"))
+        console.log("sort by gender:", sort_object_list_by_field([
+            { name: 'John', age: 42, gender: 'M' },
+            { name: 'Jack', age: 34, gender: 'M' },
+            { name: 'Michael', age: 40, gender: 'M' },
+            { name: 'Kendra', age: 48, gender: 'F' }
+        ], "gender"))
+    </script>
+</body>
+
+</html>
