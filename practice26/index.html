@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function search_array(haystack_array, needle_array) {
+            var output_array = [];
+            for (i = 0; i < needle_array.length; i++) {
+                if (haystack_array.includes(needle_array[i])) {
+                    output_array.push(needle_array[i])
+                }
+            }
+            return output_array;
+        }
+        var haystack = ['cat', 'dog', 'bird', 'turtle', 'lizard'];
+        var needle = ['dog', 'lizard', 'flower', 'monkey', 'unicorn']
+        console.log(search_array(haystack, needle))
+
+    </script>
+</body>
+
+</html>
