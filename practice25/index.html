@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add_arrays(first_array, second_array) {
+            var output_array = [];
+            if (first_array.length === second_array.length) {
+                for (i = 0; i < first_array.length; i++) {
+                    output_array.push(first_array[i] + second_array[i]);
+                }
+                return output_array;
+            }
+            return 'Please input arrays with the same amount of values'
+        }
+
+        console.log(add_arrays([3, -5, 15, 4], [3, 18, -5, -4]))
+
+    </script>
+</body>
+
+</html>
