@@ -29,4 +29,7 @@ Build a function takes in a number and converts it to roman numerals
 - Example: 
 	- `var the_number = 62;`
 	- `romanNumerals(the_number);`
-	- Returns - `LXIIV`
+	- Returns - `LXII`
+62 - 50 = 12 - 10 = 2
+50 plus 10 plus 2
+L X II
