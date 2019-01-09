@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function reverse_t9(keys) {
+            console.log("keys:", keys)
+            var keys_indiv = keys.split('');
+            var keys_array = [];
+            var group_number = '';
+            for (var j = 1; j < keys_indiv.length; j++) {
+                if (keys_indiv[j] === keys_indiv[j - 1]) {
+                    if (j === 1 || (j > 1 && group_number === '')) {
+                        group_number = keys_indiv[j - 1]
+                    } else if (j === keys_indiv.length - 1) {
+                        keys_array.push(group_number)
+                    }
+                    group_number = group_number + keys_indiv[j];
+                } else if (keys_indiv[j] !== keys_indiv[j - 1] && keys_indiv[j - 1] !== keys_indiv[j - 2]) {
+                    keys_array.push(keys_indiv[j - 1])
+                } else {
+                    keys_array.push(group_number)
+                    group_number = '';
+                }
+                console.log(group_number)
+            }
+            var output = '';
+            var lookup_Obj = {
+                2: 'abc',
+                3: 'def',
+                4: 'ghi',
+                5: 'jkl',
+                6: 'mno',
+                7: 'pqrs',
+                8: 'tuv',
+                9: 'wxyz',
+            }
+            console.log(keys_array)
+            for (var i = 0; i < keys_array.length; i++) {
+                for (key in lookup_Obj) {
+                    if (keys_array[i].includes(key)) {
+                        console.log("keys_array[i]:", keys_array[i])
+                        output += lookup_Obj[key][keys_array[i].length - 1]
+                    }
+                }
+            }
+            return output;
+        }
+
+        console.log(reverse_t9('44 444 44666 9 277733 999666888'))
+    </script>
+</body>
+
+</html>
