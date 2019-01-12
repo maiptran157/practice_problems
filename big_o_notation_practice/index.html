@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var smallestInt = function (inputArray, i = 1) {
+        //     if (inputArray.includes(i)) {
+        //         i++
+        //         // debugger;
+        //         return smallestInt(inputArray, i);
+        //     } else {
+        //         return i;
+        //     }
+        // }
+
+        // console.log(smallestInt([1, 3, 6, 4, 1, 2]));
+        // console.log(smallestInt([1, 2, 3]));
+        // console.log(smallestInt([-1, -3]));
+        // console.log(smallestInt([-1, -3, 1]));
+
+        function solution(inputArray) {
+            var twoDigitsArray = [];
+            for (i = 0; i < inputArray.length; i++) {
+                if ((inputArray[i] > 9 && inputArray[i] < 100) || (inputArray[i] * -1 > 9 && inputArray[i] * -1 < 100)) {
+                    twoDigitsArray.push(inputArray[i]);
+                }
+            }
+
+            // return twoDigitsArray.reduce((num1, num2) => num1 + num2);
+            var sum = 0;
+            for (j = 0; j < twoDigitsArray.length; j++) {
+                sum += twoDigitsArray[j];
+            }
+            return sum;
+
+
+        }
+
+        console.log(solution([1, 1000, 80, -91]));
+        console.log(performance.now() / 1000)
+        console.log(solution([47, 1900, 1, 90, 45]));
+        console.log(performance.now() / 1000)
+        console.log(solution([-13, 1900, 1, 100, 45]))
+        console.log(performance.now() / 1000)
+
+    </script>
+</body>
+
+</html>
