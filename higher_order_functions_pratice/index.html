@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Flattening
+        // Use the reduce method in combination with the concat method to “flatten” an array of arrays into a single array that has all the elements of the original arrays.
+
+        // let arrays = [[1, 2, 3], [4, 5], [6]];
+        // Your code here.
+        // → [1, 2, 3, 4, 5, 6]
+
+        function flatten_array(arrays) {
+            const result = arrays.reduce((accumulator, currentValue) => accumulator + "," + currentValue);
+            return result;
+        }
+
+        console.log(flatten_array([[1, 2, 3], [4, 5], [6]]))
+
+    </script>
+</body>
+
+</html>
