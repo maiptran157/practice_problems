@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /**
+         * @param {number[]} nums
+         * @param {number} target
+         * @return {number[]}
+         */
+        var twoSum = function (nums, target) {
+            var result = [];
+            for (i = 0; i < nums.length; i++) {
+                var diff = target - nums[i];
+                var indexOfDiff = nums.indexOf(diff)
+                if (nums.includes(diff) && indexOfDiff !== i) {
+                    result[0] = i;
+                    result[1] = indexOfDiff;
+                    return result;
+                }
+            }
+        };
+
+        console.log(twoSum([3, 2, 4], 6));
+        console.log(twoSum([2, 7, 11, 15], 9));
+
+    </script>
+</body>
+
+</html>
