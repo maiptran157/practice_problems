@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var isPalindrome = function (x) {
+            var numToString = x.toString();
+            var numToStringArr = numToString.split("");
+            if (numToStringArr[0] !== "-") {
+                if (x - numToStringArr.reverse().join("") === 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        console.log(isPalindrome(121));
+        console.log(isPalindrome(-121));
+        console.log(isPalindrome(10));
+        console.log(isPalindrome(0));
+        console.log(isPalindrome(11));
+        console.log(isPalindrome(1001));
+
+    </script>
+</body>
+
+</html>
