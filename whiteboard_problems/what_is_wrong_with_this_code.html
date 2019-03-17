@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click!</button>
+    <script>
+        var counter = {
+            cnt: 0,
+            inc: function () {
+                counter.cnt++;
+                console.log(counter.cnt);
+            }
+        };
+        window.onload = function () {
+            var button = document.getElementsByTagName('button')[0];
+            console.log("button:", button);
+            button.addEventListener('click', counter.inc);
+        }
+    </script>
+</body>
+
+</html>
